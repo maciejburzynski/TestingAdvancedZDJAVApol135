@@ -40,8 +40,15 @@ public class CalculatorTest {
 
 //        given
         Calculator calculator = new Calculator();
-//        when + then
-        assertThrows(IllegalArgumentException.class, () -> calculator.subtract(10, 20));
+
+        //        when + then
+        assertThrows(IllegalArgumentException.class,
+                () -> calculator.subtract(10, 20),
+                "Y is greater than X");
+
+        assertThrows(IllegalArgumentException.class,
+                () -> calculator.subtract(210, 20),
+                "ByczQ, X is too big");
     }
 
 
