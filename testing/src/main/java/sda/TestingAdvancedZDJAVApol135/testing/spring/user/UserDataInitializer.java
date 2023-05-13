@@ -14,8 +14,9 @@ public class UserDataInitializer {
     @PostConstruct
     public void addUsers() {
         User user = new User("Maciej", 29);
-//        User user1 = new User("Andrzej", 35);
+        User user1 = new User("Andrzej", 35);
 //
-//        userService.addUser(user);
+        userService.addUser(user);
+        userService.addUser(user1);
     }
 }
