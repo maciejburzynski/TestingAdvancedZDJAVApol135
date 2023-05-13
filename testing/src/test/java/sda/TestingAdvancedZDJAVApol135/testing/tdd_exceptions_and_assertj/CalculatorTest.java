@@ -1,7 +1,7 @@
-package sda.TestingAdvancedZDJAVApol135.testing.tdd;
+package sda.TestingAdvancedZDJAVApol135.testing.tdd_exceptions_and_assertj;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import sda.TestingAdvancedZDJAVApol135.testing.exception.NumberIsTooBigException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,7 +18,6 @@ public class CalculatorTest {
 //        then
         assertEquals(5, result);
         assertNotEquals(90, result);
-
     }
 
     @Test
@@ -46,7 +45,7 @@ public class CalculatorTest {
                 () -> calculator.subtract(10, 20),
                 "Y is greater than X");
 
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(NumberIsTooBigException.class,
                 () -> calculator.subtract(210, 20),
                 "ByczQ, X is too big");
     }
